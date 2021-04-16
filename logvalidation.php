@@ -1,24 +1,24 @@
 <?php
 
-function isFormValid(){
-    if (isset($_POST['submit']) && isUserValid() && isPassValid())
+function isLogFormValid(){
+    if (isset($_POST['logsubmit']) && isLogUserValid() && isLogPassValid())
         return true;
     else
         return false;
 }
 
 //Validation
-function isUserValid(){
-    if (!isset($_POST['submit'])) return true;
-        if ($_POST['username'] == '')
+function isLogUserValid(){
+    if (!isset($_POST['logsubmit'])) return true;
+        if ($_POST['logusername'] == '')
             return false;
         else
             return true;
 }
 
-function isPassValid(){
-    if (!isset($_POST['submit'])) return true;
-        if ($_POST['password'] == '')
+function isLogPassValid(){
+    if (!isset($_POST['logsubmit'])) return true;
+        if ($_POST['logpassword'] == '')
             return false;
         else
             return true;
@@ -26,10 +26,10 @@ function isPassValid(){
 
 
 //Display warnings
-function displayUserWarning(){
+function displayLogUserWarning(){
     echo "&nbsp;&nbsp;Please input a username.";
 }
 
-function displayPassWarning(){
+function displayLogPassWarning(){
     echo "&nbsp;&nbsp;Please input a password.";
 }

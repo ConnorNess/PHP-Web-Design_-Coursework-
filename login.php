@@ -1,7 +1,9 @@
 <!DOCTYPE>
 <html>
-<head> 40272321 - Login </head>
-<link rel="stylesheet" href="style.css">
+<head>
+    <title>40272321 - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <header>
     <ul>
@@ -16,10 +18,18 @@
     <?php
         include 'logvalidation.php';
 
-        if(isFormValid())
+        if(isLogFormValid())
             include 'logconfirmation.php';
         else
             include 'logform.php';
+    ?>
+    <?php
+        include 'registervalidation.php';
+
+        if(isRegisterFormValid())
+            include 'registerconfirmation.php';
+        else
+            include 'registerform.php';
     ?>
 </body>
 </html>

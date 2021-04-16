@@ -1,6 +1,6 @@
 <html> 
 <head>
-    <title>40272321</title>
+    <title>40272321 - Drinks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
