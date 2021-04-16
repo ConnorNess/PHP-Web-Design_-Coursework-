@@ -15,6 +15,7 @@
 </header>
 
 <body>
+<form action="logauthenticate.php" method="post">
     <?php
         include 'logvalidation.php';
 
@@ -31,5 +32,6 @@
         else
             include 'registerform.php';
     ?>
+</form>
 </body>
 </html>

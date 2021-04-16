@@ -13,7 +13,7 @@ if ( mysqli_connect_errno() ) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if ( !isset($_POST['logusername'], $_POST['loginpassword']) ) {
+if ( !isset($_POST['logusername'], $_POST['logpassword']) ) {
 	exit('Please fill both the username and password fields!');
 }
 
