@@ -1,3 +1,4 @@
+<!DOCTYPE>
 <html>
 <head> 40272321 - Login </head>
 <link rel="stylesheet" href="style.css">
@@ -12,19 +13,13 @@
 </header>
 
 <body>
-    <table>
-        <td>
-            <label for="username"><h2>Username</h2></label>
-            <input type="text" name="username" required>
-        </td>
-        <td>
-            <label for="password"><h2>Password</h2></label>
-            <input type="password" name="password" required>
-        </td>
-        <tr><td>
-            <button type="submit">Login</button>
-        </tr></td>
-    </table>
-</body>
+    <?php
+        include 'logvalidation.php';
 
+        if(isFormValid())
+            include 'logconfirmation.php';
+        else
+            include 'logform.php';
+    ?>
+</body>
 </html>
