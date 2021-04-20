@@ -1,6 +1,6 @@
-Step one, in Apache admin, create a database named 'phplogin'
+Step one, in Apache admin, create a database named '40272321_cw2' on utf8_general_ci
 
-Step two:
+Step two: paste this under SQL tab
 
 
 CREATE TABLE IF NOT EXISTS `accounts` (
@@ -11,3 +11,4 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `accounts` (`id`, `username`, `password`) VALUES (1, 'uadmin', 'padmin');
+INSERT INTO `accounts` (`id`, `username`, `password`) VALUES (2, 'test', 'test');
