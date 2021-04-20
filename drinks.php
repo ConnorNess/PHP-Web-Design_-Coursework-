@@ -5,12 +5,9 @@
 </head>
 
 <header>
-    <ul>
-        <li><a>Drinks</a></li>
-        <li><a>Social Media</a></li>
-        <li><a>Information</a></li>
-        <li><a href="login.php">Account</a></li>
-      </ul>
+    <?php 
+        include 'navbar.php';
+    ?>
 </header>
 
 <body>

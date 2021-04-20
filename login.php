@@ -6,12 +6,9 @@
 </head>
 
 <header>
-    <ul>
-        <li><a href="drinks.php">Drinks</a></li>
-        <li><a>Social Media</a></li>
-        <li><a>Information</a></li>
-        <li><a>Account</a></li>
-      </ul>
+    <?php 
+        include 'navbar.php';
+    ?>
 </header>
 
 <body>
@@ -24,6 +21,9 @@
         else
             include 'logform.php';
     ?>
+</form>
+
+<form action = "register.php" method="post">
     <?php
         include 'registervalidation.php';
 
