@@ -10,29 +10,37 @@
     ?>
 </header>
 
+
 <body>
+    <?php
+    $con = mysqli_connect('localhost', 'root', '', '40272321_cw2');
+    if ( mysqli_connect_errno() ) {
+        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+    $query = mysql_query("select * from drinks")
+    ?>
+/*
     <table>
-        <tr>
-            <td> <img class="resize" src="desperados.jpg"> </td>
-            <td> <h1>Desperados 330ml x 3</h1> </td>
-            <tr><td> <button type="submit"> Add to cart </button> </td></tr>
+        <tr class="header">
+            <td>Id</td>
+            <td>Title</td>
+            <td>Date</td>
         </tr>
-        <tr>
-            <table>
-                <tr><th>Tequila Flavour Beer</th> </tr>
-                <tr> 
-                    <th>Alcohol Percentage:</th>
-                    <td>5.9%</td>
-                </tr>
-                <tr> 
-                    <th>Carbohydrates:</th>
-                    <td>6.3g per 100ml</td>
-                </tr>
-            </table>
+        <?php
+           $i = 0;
+           while ($row = mysql_fetch_array($query)) {
+               echo "<td>".$row[drink]."</td>";
+               echo "<td>".$row[percentage]."</td>";
+               echo "<td>".$row[price]."</td>";
+               echo "</tr>";
+               $i = ($i==0) ? 1:0;
+           }
+
+        ?>
         </tr>
     </table>
-    
-    
+
+    */
     
 </body>
 

@@ -17,7 +17,7 @@
         include 'logvalidation.php';
 
         if(isLogFormValid())
-            include 'logconfirmation.php';
+            include 'profile.php';
         else
             include 'logform.php';
     ?>

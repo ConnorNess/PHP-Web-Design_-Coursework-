@@ -1,4 +1,4 @@
-Step one, in Apache admin, create a database named '40272321_cw2' on utf8_general_ci
+Step one, in Apache admin, create a database named `40272321_cw2` on utf8_general_ci
 
 Step two: paste this under SQL tab
 
@@ -12,3 +12,22 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 
 INSERT INTO `accounts` (`id`, `username`, `password`) VALUES (1, 'uadmin', 'padmin');
 INSERT INTO `accounts` (`id`, `username`, `password`) VALUES (2, 'test', 'test');
+
+
+
+Step three: paste this under SQL tab
+
+
+CREATE TABLE IF NOT EXISTS `drinks` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+  	`drink` varchar(255) NOT NULL,
+  	`percentage` numeric(4,2) NOT NULL,
+	`price` numeric(4,2) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+INSERT INTO `drinks` (`id`, `drink`, `percentage`, `price`) VALUES (1, 'Desperados  330mlx3', '5.90', '5.00');
+INSERT INTO `drinks` (`id`, `drink`, `percentage`, `price`) VALUES (2, 'Goose Island  330mlx8', '4.10', '12.00');
+INSERT INTO `drinks` (`id`, `drink`, `percentage`, `price`) VALUES (3, 'Budweiser  330mlx20', '4.50', '9.99');
+INSERT INTO `drinks` (`id`, `drink`, `percentage`, `price`) VALUES (4, 'Corona Extra  330mlx24', '4.50', '19.99');
+INSERT INTO `drinks` (`id`, `drink`, `percentage`, `price`) VALUES (5, 'Kopparberg Strawberry  330mlx10', '4.00', '9.99');

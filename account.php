@@ -25,27 +25,32 @@ $stmt->fetch();
 $stmt->close();
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-<head><title>Profile Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+<head>
+    <title>40272321 - Account</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="loggedin">
-    <nav class="navtop">
-        <div>
-            <h1>Website Title</h1>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        </div>
-    </nav>
-    <div class="content">
-        <h2>Profile Page</h2>
-            <table>
-                <tr>
-                    <td>Username:</td>
-                    <td><?=$_SESSION['name']?></td>
-                </tr>
-            </table>
+<header>
+    <?php 
+        include 'navbar.php';
+    ?>
+</header>
+
+<body>
+    <table>
+        <tr>
+            <td><label for="logusername"><h2>Username</h2></label></td>
+            <td><h3><?=$_SESSION['name']?></h3></td>
+        </tr>
+        <tr>
+            <td>
+                <form action = "logout.php">
+                    <input name="logout" Value="Logout" type="submit"/>
+                </form>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

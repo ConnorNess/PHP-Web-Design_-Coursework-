@@ -1,7 +1,6 @@
 <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
 
 <table>
-    <tr><td><h1> Login </h1></td></tr>
     <td>
         <label for="logusername"><h2>Username</h2></label>
         <input name="logusername">
