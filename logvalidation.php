@@ -26,10 +26,6 @@ function isLogPassValid(){
 
 
 //Display warnings
-function displayLogUserWarning(){
-    echo "&nbsp;&nbsp;Please input a username.";
-}
-
-function displayLogPassWarning(){
-    echo "&nbsp;&nbsp;Please input a password.";
+function displayWarning(){
+    echo "&nbsp;&nbsp;Error, incorrect data";
 }

@@ -25,14 +25,14 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         if ($stmt = $con->prepare('INSERT INTO accounts (username, password) VALUES (?, ?)')) {
         $stmt->bind_param('ss', $_POST['registerusername'], $_POST['registerpassword']);
         $stmt->execute();
-            echo 'You have successfully registered, you can now login!';
+		header('Location: login.php');
         } else {
-            echo 'Could not prepare statement!';
+            header('Location: login.php');
         }
 	}
 	$stmt->close();
 } else {
-	echo 'Could not prepare statement!';
+	header('Location: login.php');
 }
 $con->close();
 ?>

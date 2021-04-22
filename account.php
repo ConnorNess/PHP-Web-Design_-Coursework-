@@ -46,7 +46,23 @@ $stmt->close();
                     <input name="logout" Value="Logout" type="submit"/>
                 </form>
             </td>
+            <td>
+                <form action = "deleteuser.php">
+                    <input name="deleteuser" Value="Delete User" type="submit"/>
+                </form>
+            </td>
         </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <label for="changepass"><h2>Change Password</h2></label>
+                <input name="changepass" type="password">
+            </td>
+        <tr><td>
+            <input name="changesubmit" Value="Change" type="submit"/>
+        </tr></td>
     </table>
 </body>
 </html>
