@@ -28,7 +28,7 @@
         include 'registervalidation.php';
 
         if(isRegisterFormValid())
-            include 'registerconfirmation.php';
+            include 'login.php';
         else
             include 'registerform.php';
     ?>

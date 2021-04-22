@@ -13,35 +13,30 @@
 
 <body>
     <?php
-    $con = mysqli_connect('localhost', 'root', '', '40272321_cw2');
-    if ( mysqli_connect_errno() ) {
-        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-    }
-    $query = mysql_query("select * from drinks")
+        $con = mysqli_connect('localhost', 'root', '', '40272321_cw2');
+        if ( mysqli_connect_errno() ) {
+            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+        }
+        //$query = mysql_query("select * from drinks")
+
+        $sql = "SELECT drink, percentage, price FROM drinks";
+        $result = $con->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table>";
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>".$row["drink"]."</td>";
+            echo "<td>".$row["percentage"]."%</td>";
+            echo "<td>£".$row["price"]."</td>";
+            echo "<td> <input name=\"addtocart\" Value=\"Add to cart\" type=\"submit\"> </td></tr>";
+        }
+        echo "</table>";
+        } else {
+        echo "0 results";
+        }
+        $con->close();
     ?>
-/*
-    <table>
-        <tr class="header">
-            <td>Id</td>
-            <td>Title</td>
-            <td>Date</td>
-        </tr>
-        <?php
-           $i = 0;
-           while ($row = mysql_fetch_array($query)) {
-               echo "<td>".$row[drink]."</td>";
-               echo "<td>".$row[percentage]."</td>";
-               echo "<td>".$row[price]."</td>";
-               echo "</tr>";
-               $i = ($i==0) ? 1:0;
-           }
-
-        ?>
-        </tr>
-    </table>
-
-    */
-    
 </body>
-
 </html>
