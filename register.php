@@ -1,4 +1,4 @@
-<!-- Code taken from https://codeshack.io/secure-registration-system-php-mysql/ -->
+<!-- Code adapted from https://codeshack.io/secure-registration-system-php-mysql/ -->
 
 <?php
 $DATABASE_HOST = 'localhost';

@@ -1,4 +1,4 @@
-<!-- Code taken from https://codeshack.io/secure-login-system-php-mysql/ -->
+<!-- Code adapted from https://codeshack.io/secure-login-system-php-mysql/ -->
 
 <?php
 session_start();
